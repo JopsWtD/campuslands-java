@@ -1,38 +1,53 @@
-# Java: archivos compilados, paquetes y registros de fallos de la JVM
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+.kotlin
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+# Reglas del curso: código generado y material local privado
 *.class
 *.jar
 *.war
 *.ear
 hs_err_pid*
 replay_pid*
-
-# IntelliJ IDEA: configuración personal y salida de compilación
 .idea/
 *.iml
 *.iws
 *.ipr
-out/
-
-# Archivos del sistema
-.DS_Store
 Thumbs.db
 desktop.ini
-
-# Archivos temporales y registros generados localmente
 *.log
 *.tmp
 *.swp
 *~
-
-# ==========================================
-# Material privado del docente
-# ==========================================
-
-# Documentación institucional y referencias locales
 docs/
 **/docs/
-
-# Soluciones privadas, en la raíz o en cualquier sesión
 solution/
 solutions/
 solucion/
@@ -41,17 +56,10 @@ soluciones/
 **/solutions/
 **/solucion/
 **/soluciones/
-
-# ==========================================
-# Configuración local y archivos de trabajo
-# ==========================================
-
 AGENTS.md
 AGENTS.override.md
 PLANS.md
 .codex/
 .agent/
-
-# Archivos auxiliares de contexto local
 .codex-*
 codex-*.md

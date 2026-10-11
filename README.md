@@ -165,7 +165,7 @@ git pull
 
 ## Estructura del repositorio
 
-El curso se organiza en **seis módulos y veinte sesiones**, con numeración continua. Esta es la estructura pública que se irá completando a medida que avance el curso. Actualmente están creadas las cuatro sesiones de fundamentos; las demás sesiones y las carpetas públicas `demo/` y `labs/` se incorporarán posteriormente.
+El curso se organiza en **seis módulos y veinte sesiones**, con numeración continua. Esta es la estructura pública que se irá completando a medida que avance el curso. Actualmente están creadas las cuatro sesiones de fundamentos bajo `src/`. La sesión 1 ya incluye su README, tres demos y cinco labs; las demás sesiones y su material se incorporarán posteriormente.
 
 ### Mapa del curso
 
@@ -175,7 +175,8 @@ El diagrama muestra los seis módulos, las veinte sesiones y las carpetas `demo/
 flowchart LR
     R["campus-java/"] --> README["README.md"]
     R --> IGNORE[".gitignore"]
-    R --> M1["01-fundamentos-java/"]
+    R --> SRC["src/ · módulos y sesiones"]
+    SRC --> M1["01-fundamentos-java/"]
     M1 --> S1_1["sesion-01-introduccion-configuracion-variables/"]
     S1_1 --> S1_1_demo["demo/"]
     S1_1 --> S1_1_labs["labs/"]
@@ -188,7 +189,7 @@ flowchart LR
     M1 --> S1_4["sesion-04-cadenas-conversiones/"]
     S1_4 --> S1_4_demo["demo/"]
     S1_4 --> S1_4_labs["labs/"]
-    R --> M2["02-poo-estructuras-datos/"]
+    SRC --> M2["02-poo-estructuras-datos/"]
     M2 --> S2_1["sesion-05-introduccion-poo/"]
     S2_1 --> S2_1_demo["demo/"]
     S2_1 --> S2_1_labs["labs/"]
@@ -207,7 +208,7 @@ flowchart LR
     M2 --> S2_6["sesion-10-set-map-enum-excepciones/"]
     S2_6 --> S2_6_demo["demo/"]
     S2_6 --> S2_6_labs["labs/"]
-    R --> M3["03-solid-patrones-diseno/"]
+    SRC --> M3["03-solid-patrones-diseno/"]
     M3 --> S3_1["sesion-11-principios-solid/"]
     S3_1 --> S3_1_demo["demo/"]
     S3_1 --> S3_1_labs["labs/"]
@@ -220,21 +221,21 @@ flowchart LR
     M3 --> S3_4["sesion-14-patrones-comportamiento/"]
     S3_4 --> S3_4_demo["demo/"]
     S3_4 --> S3_4_labs["labs/"]
-    R --> M4["04-concurrencia-java/"]
+    SRC --> M4["04-concurrencia-java/"]
     M4 --> S4_1["sesion-15-introduccion-concurrencia/"]
     S4_1 --> S4_1_demo["demo/"]
     S4_1 --> S4_1_labs["labs/"]
     M4 --> S4_2["sesion-16-sincronizacion-atomicos/"]
     S4_2 --> S4_2_demo["demo/"]
     S4_2 --> S4_2_labs["labs/"]
-    R --> M5["05-persistencia-datos/"]
+    SRC --> M5["05-persistencia-datos/"]
     M5 --> S5_1["sesion-17-manejo-archivos/"]
     S5_1 --> S5_1_demo["demo/"]
     S5_1 --> S5_1_labs["labs/"]
     M5 --> S5_2["sesion-18-jdbc/"]
     S5_2 --> S5_2_demo["demo/"]
     S5_2 --> S5_2_labs["labs/"]
-    R --> M6["06-lambdas-stream-api/"]
+    SRC --> M6["06-lambdas-stream-api/"]
     M6 --> S6_1["sesion-19-expresiones-lambda/"]
     S6_1 --> S6_1_demo["demo/"]
     S6_1 --> S6_1_labs["labs/"]
@@ -253,72 +254,74 @@ Este árbol detalla los nombres y rutas previstos; no indica que todo el materia
 campus-java/
 ├── README.md
 ├── .gitignore
-├── 01-fundamentos-java/
-│   ├── sesion-01-introduccion-configuracion-variables/
-│   │   ├── demo/
-│   │   └── labs/
-│   ├── sesion-02-operadores-estructuras-decision/
-│   │   ├── demo/
-│   │   └── labs/
-│   ├── sesion-03-estructuras-repetitivas/
-│   │   ├── demo/
-│   │   └── labs/
-│   └── sesion-04-cadenas-conversiones/
-│       ├── demo/
-│       └── labs/
-├── 02-poo-estructuras-datos/
-│   ├── sesion-05-introduccion-poo/
-│   │   ├── demo/
-│   │   └── labs/
-│   ├── sesion-06-encapsulamiento/
-│   │   ├── demo/
-│   │   └── labs/
-│   ├── sesion-07-herencia-polimorfismo/
-│   │   ├── demo/
-│   │   └── labs/
-│   ├── sesion-08-arreglos-listas-genericos/
-│   │   ├── demo/
-│   │   └── labs/
-│   ├── sesion-09-relaciones-entre-clases/
-│   │   ├── demo/
-│   │   └── labs/
-│   └── sesion-10-set-map-enum-excepciones/
-│       ├── demo/
-│       └── labs/
-├── 03-solid-patrones-diseno/
-│   ├── sesion-11-principios-solid/
-│   │   ├── demo/
-│   │   └── labs/
-│   ├── sesion-12-patrones-creacionales/
-│   │   ├── demo/
-│   │   └── labs/
-│   ├── sesion-13-patrones-estructurales/
-│   │   ├── demo/
-│   │   └── labs/
-│   └── sesion-14-patrones-comportamiento/
-│       ├── demo/
-│       └── labs/
-├── 04-concurrencia-java/
-│   ├── sesion-15-introduccion-concurrencia/
-│   │   ├── demo/
-│   │   └── labs/
-│   └── sesion-16-sincronizacion-atomicos/
-│       ├── demo/
-│       └── labs/
-├── 05-persistencia-datos/
-│   ├── sesion-17-manejo-archivos/
-│   │   ├── demo/
-│   │   └── labs/
-│   └── sesion-18-jdbc/
-│       ├── demo/
-│       └── labs/
-└── 06-lambdas-stream-api/
-    ├── sesion-19-expresiones-lambda/
-    │   ├── demo/
-    │   └── labs/
-    └── sesion-20-stream-api/
-        ├── demo/
-        └── labs/
+└── src/
+    ├── 01-fundamentos-java/
+    │   ├── sesion-01-introduccion-configuracion-variables/
+    │   │   ├── README.md
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   ├── sesion-02-operadores-estructuras-decision/
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   ├── sesion-03-estructuras-repetitivas/
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   └── sesion-04-cadenas-conversiones/
+    │       ├── demo/
+    │       └── labs/
+    ├── 02-poo-estructuras-datos/
+    │   ├── sesion-05-introduccion-poo/
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   ├── sesion-06-encapsulamiento/
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   ├── sesion-07-herencia-polimorfismo/
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   ├── sesion-08-arreglos-listas-genericos/
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   ├── sesion-09-relaciones-entre-clases/
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   └── sesion-10-set-map-enum-excepciones/
+    │       ├── demo/
+    │       └── labs/
+    ├── 03-solid-patrones-diseno/
+    │   ├── sesion-11-principios-solid/
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   ├── sesion-12-patrones-creacionales/
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   ├── sesion-13-patrones-estructurales/
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   └── sesion-14-patrones-comportamiento/
+    │       ├── demo/
+    │       └── labs/
+    ├── 04-concurrencia-java/
+    │   ├── sesion-15-introduccion-concurrencia/
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   └── sesion-16-sincronizacion-atomicos/
+    │       ├── demo/
+    │       └── labs/
+    ├── 05-persistencia-datos/
+    │   ├── sesion-17-manejo-archivos/
+    │   │   ├── demo/
+    │   │   └── labs/
+    │   └── sesion-18-jdbc/
+    │       ├── demo/
+    │       └── labs/
+    └── 06-lambdas-stream-api/
+        ├── sesion-19-expresiones-lambda/
+        │   ├── demo/
+        │   └── labs/
+        └── sesion-20-stream-api/
+            ├── demo/
+            └── labs/
 ```
 
 ### Qué encontrarás en cada sesión
@@ -343,4 +346,8 @@ flowchart LR
 
 **Las carpetas `labs/` del repositorio oficial contienen las actividades propuestas; tus entregas se guardan en tu repositorio personal.**
 
-Cada sesión tendrá posteriormente su propio README con las orientaciones necesarias para trabajar. Mientras se prepara el material, las cuatro sesiones actuales conservan un `.gitkeep` vacío para que Git pueda versionar sus carpetas.
+La [sesión 1](src/01-fundamentos-java/sesion-01-introduccion-configuracion-variables/README.md) ya tiene su README con las orientaciones de trabajo. Las demás sesiones tendrán posteriormente sus propias guías; las carpetas pendientes conservan un `.gitkeep` para que Git pueda versionarlas.
+
+### Organización en IntelliJ IDEA
+
+`src/` agrupa los módulos y sesiones del curso. Las carpetas con guiones son categorías del material, no paquetes Java. Para ejecutar los ejemplos desde esta organización, marca las carpetas `demo/` y `labs/` de la sesión como **Sources Root**, dejando el `src/` general sin esa marca. Consulta la guía de la sesión 1 para los pasos detallados.
