@@ -1,24 +1,49 @@
-# Compiled class file
+# Java: archivos compilados, paquetes y registros de fallos de la JVM
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
-*.nar
 *.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# IntelliJ IDEA: configuración personal y salida de compilación
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales y registros generados localmente
+*.log
+*.tmp
+*.swp
+*~
+
+# Soluciones privadas del docente, en la raíz o en cualquier sesión
+solution/
+solutions/
+solucion/
+soluciones/
+**/solution/
+**/solutions/
+**/solucion/
+**/soluciones/
+
+# ==========================================
+# Codex / instrucciones privadas del docente
+# ==========================================
+
+AGENTS.md
+AGENTS.override.md
+PLANS.md
+.codex/
+.agent/
+
+# Opcional: otros archivos privados de contexto local de Codex
+.codex-*
+codex-*.md
