@@ -15,8 +15,7 @@ Repositorio oficial del curso de Java con ejemplos, material de clase y laborato
 - [Preguntas clave](#preguntas-clave)
 - [Actualizar el material](#actualizar-el-material)
 - [Buenas prácticas](#buenas-prácticas)
-- [Mapa de módulos del curso](#estructura-del-repo-docente-de-ejemplo)
-- [Estructura actual del repositorio](#organización-inicial-del-curso)
+- [Estructura y módulos del curso](#estructura-del-repo-docente-de-ejemplo)
 
 ## Propósito del repositorio
 
@@ -166,58 +165,44 @@ git pull
 
 ## Estructura del repo docente de ejemplo
 
-La siguiente estructura muestra una referencia de organización por módulos para `jhcuadrosp/campus-java`, en la rama `main`. Los nombres `01-sesion` y `02-sesion` son ilustrativos; la estructura inicial real aparece en la sección siguiente.
+Así se organiza `jhcuadrosp/campus-java`, en la rama `main`. El diagrama integra los archivos principales, las cuatro sesiones actuales de fundamentos y los módulos previstos para las siguientes etapas del curso.
 
 ```mermaid
 flowchart LR
     R["jhcuadrosp/campus-java"] --> B["Rama main"]
-    B --> M1["01-fundamentos-java"]
-    B --> M2["02-poo-estructuras-datos"]
-    B --> M3["03-solid-patrones"]
-    B --> M4["04-concurrencia"]
-    B --> M5["05-persistencia"]
-    B --> M6["06-lambdas-stream-api"]
-    M1 --> S11["01-sesion · ejemplo"]
-    M1 --> S12["02-sesion · ejemplo"]
-    M2 --> S21["01-sesion · ejemplo"]
-    classDef inicial fill:#dcfce7,stroke:#16a34a,color:#14532d;
-    classDef posterior fill:#f1f5f9,stroke:#64748b,color:#0f172a;
-    class M1 inicial;
-    class M2,M3,M4,M5,M6 posterior;
-```
-
-**Estado actual:** el módulo `01-fundamentos-java` tiene sus primeras cuatro sesiones preparadas. Los módulos 02 a 06 representan la organización prevista y se incorporarán conforme avance el curso.
-
-## Organización inicial del curso
-
-```mermaid
-flowchart LR
-    R["campus-java/"] --> README["README.md · guía principal"]
-    R --> IGNORE[".gitignore · exclusiones locales"]
-    R --> M["01-fundamentos-java/"]
-    M --> S1["sesion-01-introduccion-configuracion-variables/"]
-    M --> S2["sesion-02-operadores-estructuras-decision/"]
-    M --> S3["sesion-03-estructuras-repetitivas/"]
-    M --> S4["sesion-04-cadenas-conversiones/"]
+    B --> README["README.md · guía principal"]
+    B --> IGNORE[".gitignore · exclusiones locales"]
+    B --> M1["01-fundamentos-java/ · disponible"]
+    B --> M2["02-poo-estructuras-datos/ · previsto"]
+    B --> M3["03-solid-patrones/ · previsto"]
+    B --> M4["04-concurrencia/ · previsto"]
+    B --> M5["05-persistencia/ · previsto"]
+    B --> M6["06-lambdas-stream-api/ · previsto"]
+    M1 --> S1["sesion-01-introduccion-configuracion-variables/"]
+    M1 --> S2["sesion-02-operadores-estructuras-decision/"]
+    M1 --> S3["sesion-03-estructuras-repetitivas/"]
+    M1 --> S4["sesion-04-cadenas-conversiones/"]
     S1 --> K1[".gitkeep"]
     S2 --> K2[".gitkeep"]
     S3 --> K3[".gitkeep"]
     S4 --> K4[".gitkeep"]
-    classDef modulo fill:#dbeafe,stroke:#2563eb,color:#172554;
-    classDef sesion fill:#dcfce7,stroke:#16a34a,color:#14532d;
-    class M modulo;
-    class S1,S2,S3,S4 sesion;
+    classDef actual fill:#dcfce7,stroke:#16a34a,color:#14532d;
+    classDef previsto fill:#f1f5f9,stroke:#64748b,color:#0f172a;
+    classDef principal fill:#dbeafe,stroke:#2563eb,color:#172554;
+    class M1,S1,S2,S3,S4 actual;
+    class M2,M3,M4,M5,M6 previsto;
+    class R,B,README,IGNORE principal;
 ```
 
-| Sesión | Tema |
+**Disponible:** la estructura del módulo `01-fundamentos-java` y sus cuatro primeras sesiones. **Previsto:** los módulos 02 a 06, que se incorporarán conforme avance el curso; sus carpetas todavía no existen.
+
+| Sesión de fundamentos | Tema |
 | --- | --- |
 | 01 | Introducción, configuración y variables |
 | 02 | Operadores y estructuras de decisión |
 | 03 | Estructuras repetitivas |
 | 04 | Cadenas y conversiones |
 
-El diagrama muestra la estructura docente preparada para el curso. Los módulos futuros se muestran únicamente en el mapa anterior.
-
 Cada sesión contiene inicialmente solo un archivo vacío `.gitkeep` para que Git pueda versionar la estructura de carpetas. Cada sesión tendrá posteriormente su propio README.
 
-Más adelante se agregarán carpetas para demos, laboratorios y soluciones privadas del docente. Las soluciones del docente serán solo para uso local y nunca deberán versionarse; sus carpetas están excluidas mediante `.gitignore`. En esta fase todavía no se crean esas carpetas ni archivos Java.
+Más adelante se agregarán carpetas públicas `demo/` y `labs/` con ejemplos y actividades. En esta fase todavía no se crean esas carpetas ni archivos Java.

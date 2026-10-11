@@ -24,7 +24,15 @@ desktop.ini
 *.swp
 *~
 
-# Soluciones privadas del docente, en la raíz o en cualquier sesión
+# ==========================================
+# Material privado del docente
+# ==========================================
+
+# Documentación institucional y referencias locales
+docs/
+**/docs/
+
+# Soluciones privadas, en la raíz o en cualquier sesión
 solution/
 solutions/
 solucion/
