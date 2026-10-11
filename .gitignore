@@ -43,7 +43,7 @@ soluciones/
 **/soluciones/
 
 # ==========================================
-# Codex / instrucciones privadas del docente
+# Configuración local y archivos de trabajo
 # ==========================================
 
 AGENTS.md
@@ -52,6 +52,6 @@ PLANS.md
 .codex/
 .agent/
 
-# Opcional: otros archivos privados de contexto local de Codex
+# Archivos auxiliares de contexto local
 .codex-*
 codex-*.md
