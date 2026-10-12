@@ -4,7 +4,7 @@ public class Lab03DatosConSentido {
         // inicial y activo. Usa String, int, double, char y boolean.
         // TODO 2: Declarar e inicializar las cinco variables con nombres claros.
         // TODO 3: Mostrar cada dato en su propia línea, con una etiqueta.
-        // TODO 4: Probar los dos conjuntos de datos del README y comparar la salida.
+        // TODO 4: Probar el caso A del README; el caso B es opcional.
         // TODO 5: Explicar por qué String no es un tipo primitivo.
     }
 }

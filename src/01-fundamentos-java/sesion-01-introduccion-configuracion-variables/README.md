@@ -101,17 +101,24 @@ En `LosDatosCambian.java`, coloca un breakpoint en `intentos = 2;` y usa **Debug
 
 ## Trabajo en clase y en casa
 
-| Minutos | Actividad |
-| --- | --- |
-| 0–15 | Entorno y recorrido mínimo de Java |
-| 15–30 | Demo 1 y lab 1 |
-| 30–50 | Demo 2 y lab 2 |
-| 50–70 | Demo 3 y preguntas sobre tipos y reasignación |
-| 70–100 | Lab 3 con revisión del docente |
-| 100–110 | Presentación de labs 4 y 5 |
-| 110–120 | Comprobación de aprendizaje y entrega |
+El bloque de laboratorios tendrá **un máximo de 40 minutos**. El resto de la clase se dedica a conceptos, demos, preguntas y retroalimentación.
 
-Consulta [los cinco laboratorios](labs/README.md). Los labs 1–3 se trabajan en clase; los labs 4–5 se completan en casa o se inician en clase si queda tiempo. Todos siguen el ciclo **predecir → completar → ejecutar → comparar → explicar**.
+| Minutos del bloque de práctica | Actividad |
+| --- | --- |
+| 0–8 | Lab 1: saludo |
+| 8–18 | Lab 2: salida |
+| 18–35 | Lab 3: variables |
+| 35–40 | Revisión breve y guardar avances |
+
+Consulta [los cinco laboratorios](labs/README.md). Empieza por los labs 1–3; completa en casa lo que no alcances y los labs 4–5. Trae los cinco terminados para la siguiente clase. Las pruebas marcadas como opcionales no son requisito de entrega.
+## Cómo completar los labs sin perderte
+
+1. Abre [la guía detallada de laboratorios](labs/README.md) y busca el número del lab que estás trabajando.
+2. Abre el archivo Java enlazado en esa actividad. Escribe las instrucciones dentro de main; no copies el bloque de salida esperada como si fuera código.
+3. Sigue los pasos numerados en orden. Cada actividad indica los datos que debes usar, las variables o decisiones que debes construir y las etiquetas de los println.
+4. Ejecuta la clase actual después de cada bloque pequeño. Compara la salida y corrige antes de continuar.
+5. Haz las ejecuciones indicadas en la tabla de pruebas, cambiando los datos iniciales. Registra entradas, salida esperada y salida observada en el README de tu repositorio personal.
+6. Revisa el apartado **Terminado cuando** antes de pasar al siguiente lab. Completar un TODO implica implementarlo y comprobarlo, no solo borrarlo.
 
 ## Entrega y comprobación final
 
