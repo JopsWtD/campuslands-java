@@ -66,7 +66,7 @@ Esta sesión usa cuatro problemas que combinan variables, operadores, decisiones
 | --- | --- | --- |
 | 1 | Movilidad | [Sistema de tarifas de estacionamiento](labs/reto-01-estacionamiento/README.md) |
 | 2 | Financiero | [Simulador de aprobación de créditos](labs/reto-02-creditos/README.md) |
-| 3 | Manufactura | [Control de producción y calidad](labs/reto-03-calidad/README.md) |
+| 3 | Manufactura | [Control de producción y calidad](labs/reto-03-calidad/EXPLICACION_EJERCICIO.md) |
 | 4 | Gastronomía | [Sistema de pedidos para un restaurante](labs/reto-04-restaurante/README.md) |
 
 Cada reto presenta el problema, decisiones previas, reglas y pruebas mínimas. Diseña tu propia solución con consola, Scanner, variables, operadores, decisiones y ciclos. No necesitas POO, arrays ni colecciones; la estructura y el ciclo pueden variar si respetan el comportamiento.
