@@ -1,7 +1,4 @@
-import java.util.Locale;
 import java.util.Scanner;
-
-import static java.lang.Math.round;
 
 
 public class S03Reto03Calidad {
@@ -14,13 +11,15 @@ public class S03Reto03Calidad {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("""
-                ===============BIENVENIDO==================
-                AL SISTEMA DE REVISIÓN DE PIEZAS POR LOTES|
-                ------------------------------------------|
-                A CONTINUACIÓN:                           |
-                Podrás digitar la cantidad de piezas que  |
-                contiene el lote que quieres revisar.     |
-                ==========================================|""");
+                ================BIENVENIDO==================
+                |        AL SISTEMA DE REVISIÓN DE         |
+                |             PIEZAS POR LOTES             |
+                |------------------------------------------|
+                |              A CONTINUACIÓN:             |
+                |   Podrás digitar la cantidad de piezas   |
+                |     que contiene el lote que quieres     |
+                |                 revisar.                 |
+                ============================================""");
 
         do {
 
@@ -82,7 +81,8 @@ public class S03Reto03Calidad {
                             |                                   |
                             |---------------RAZÓN---------------|
                             |    SUS MEDIDAS ESTÁN DENTRO DE    |
-                            |        LOS RANGOS REQUERIDOS      |
+                            |       LOS RANGOS REQUERIDOS       |
+                            |    (9.5-<9.8) O (>10.2-10.5)MM    |
                             =====================================""");
                     reprocesadas++;
                     piezaReprocesada = true;
@@ -94,8 +94,9 @@ public class S03Reto03Calidad {
                             |      ESTA PIEZA FUE APROBADA      |
                             |                                   |
                             |---------------RAZÓN---------------|
-                            |   SUS MEDIDAS ESTÁN DENTRO DE     |
-                            |       LOS RANGOS REQUERIDOS       |
+                            |     SUS MEDIDAS ESTÁN DENTRO      |
+                            |        DEL RANGO REQUERIDO        |
+                            |            (9.8-10.2)MM           |
                             =====================================""");
                     aprobadas++;
                     piezaAprobada = true;
@@ -110,7 +111,7 @@ public class S03Reto03Calidad {
                             |---------------RAZÓN---------------|
                             |  SUS MEDIDAS ESTÁN POR FUERA DEL  |
                             |  RANGO REQUERIDO EN LA REVISIÓN:  |
-                            |           (9.5-10.5MM)            |
+                            |           (9.5-10.5)MM            |
                             =====================================""");
                 rechazadas++;
                 rechazadasConsecutivas++;
@@ -125,11 +126,17 @@ public class S03Reto03Calidad {
 
             reporte = reporte.concat("Pieza "+i+": "+medida+ " | " + fila +"\n");
 
-            if (medida > medidaMaxima) {
+            if (i == 1) {
                 medidaMaxima = medida;
-            }
-            else if (medida < medidaMaxima) {
                 medidaMinima = medida;
+            }
+            else {
+                if (medida > medidaMaxima) {
+                    medidaMaxima = medida;
+                }
+                if (medida < medidaMinima) {
+                    medidaMinima = medida;
+                }
             }
 
             if (rechazadasConsecutivas == 3) {

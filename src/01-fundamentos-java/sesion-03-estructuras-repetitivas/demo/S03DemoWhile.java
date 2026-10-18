@@ -9,7 +9,5 @@ public class S03DemoWhile {
         System.out.println("Proceso finalizado");
         // Prueba limite=0: la condición inicial es falsa y no se imprime ningún intento.
         // Si omites la actualización, el ciclo no termina; analiza antes de cambiarla.
-
-
     }
 }
