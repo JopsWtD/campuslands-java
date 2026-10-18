@@ -6,6 +6,7 @@ public class S02DemoDecisiones {
         boolean bloqueado = false;
         boolean puedeEntrar = edad >= 18 && (esMiembro || tieneInvitacion) && !bloqueado;
 
+
         if (puedeEntrar) {
             System.out.println("Acceso permitido");
         } else {

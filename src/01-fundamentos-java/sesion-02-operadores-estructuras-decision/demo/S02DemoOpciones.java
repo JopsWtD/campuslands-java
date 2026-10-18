@@ -7,7 +7,7 @@ public class S02DemoOpciones {
                 costoClasico = 500;
                 break;
             case "EXPRESS":
-                costoClasico = 1_200;
+                costoClasico = 1200;
                 break;
             case "RECOGIDA":
                 costoClasico = 0;
@@ -20,7 +20,7 @@ public class S02DemoOpciones {
         // En esta comparación -1 significa opción desconocida, no un costo real.
         long costoModerno = switch (tipoEntrega) {
             case "ESTANDAR" -> 500;
-            case "EXPRESS" -> 1_200;
+            case "EXPRESS" -> 1200;
             case "RECOGIDA" -> 0;
             default -> -1;
         };
