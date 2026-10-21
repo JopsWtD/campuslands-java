@@ -1,9 +1,18 @@
+package labs;
+
 public class S05Lab01PrestamoLibro {
     public static void main(String[] args) {
-        // TODO 7: Crear primerLibro con El principito y segundoLibro con Matilda.
 
-        // TODO 8: Mostrar titulo, dos intentos de prestamo y estado del primer libro.
+        S05LibroPrestamo primerLibro = new S05LibroPrestamo("El principito");
+        S05LibroPrestamo segundoLibro = new S05LibroPrestamo("Matilda");
 
-        // TODO 9: Devolver el primer libro y mostrar el estado de ambos libros.
+        System.out.println(primerLibro.obtenerTitulo());
+        primerLibro.prestar();
+        primerLibro.prestar();
+        System.out.println(primerLibro.estaPrestado());
+
+        primerLibro.devolver();
+        System.out.println(primerLibro.estaPrestado());
+        System.out.println(segundoLibro.estaPrestado());
     }
 }

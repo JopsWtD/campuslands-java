@@ -1,3 +1,5 @@
+package demo;
+
 public class S05Demo01Vehiculo {
     private String tipo;
     private String color;

@@ -1,3 +1,5 @@
+package demo;
+
 public class S05Demo01VehiculosMain {
     public static void main(String[] args) {
         S05Demo01Vehiculo carro = new S05Demo01Vehiculo("Carro", "rojo");
