@@ -7,6 +7,6 @@ public class PlanCardio extends PlanEntrenamiento {
 
     // TODO 4: Agregar @Override y devolver 2 * 15 minutos.
     public int duracionMinutos() {
-        return 0; // Retorno provisional: reemplazar.
+        return 2 * 15;
     }
 }

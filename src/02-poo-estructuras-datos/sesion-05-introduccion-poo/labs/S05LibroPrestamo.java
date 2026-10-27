@@ -10,7 +10,6 @@ public class S05LibroPrestamo {
     }
 
     public String obtenerTitulo() {
-        // TODO 3: Devolver el titulo del objeto.
         return this.titulo;
     }
 
@@ -18,9 +17,8 @@ public class S05LibroPrestamo {
         if (prestado) {
             System.out.println("Tu prestamo fue rechazado porque el libro ya fue prestado.");
             return false;
-        }
-        else {
-            System.out.println("Tu prestamo para el libro ("+this.titulo+") fue aceptado");
+        } else {
+            System.out.println("Tu prestamo para el libro (" + this.titulo + ") fue aceptado");
             this.prestado = true;
             return true;
         }
@@ -28,11 +26,10 @@ public class S05LibroPrestamo {
 
     public void devolver() {
         if (prestado) {
-            System.out.println("El libro "+this.titulo+" fue devuelto con éxito.");
+            System.out.println("El libro " + this.titulo + " fue devuelto con éxito.");
             this.prestado = false;
-        }
-        else {
-            System.out.println("El libro ("+this.titulo+") no se pudo devolver porque nunca estuvo prestado.");
+        } else {
+            System.out.println("El libro (" + this.titulo + ") no se pudo devolver porque nunca estuvo prestado.");
         }
     }
 
