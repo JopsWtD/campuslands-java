@@ -54,6 +54,8 @@ Agotamiento bloque: stock=0 ventas=100 rechazos=60 coherente=true
 
 ## UML de la comparación
 
+Este diagrama corresponde al **demo de inventario**, paquete `s16demo00`. Para las clases `Cupos`, `Participante` y `PruebaReservas`, consulta el [diagrama propio del Lab 00](../../labs/s16lab00/README.md).
+
 ```mermaid
 classDiagram
 class Inventario {
