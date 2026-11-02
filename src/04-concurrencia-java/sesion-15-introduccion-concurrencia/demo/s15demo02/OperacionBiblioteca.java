@@ -14,6 +14,6 @@ public final class OperacionBiblioteca implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(nombre + " atendido por " + Thread.currentThread().getName());
+        System.out.println("[OperacionBiblioteca] :" + nombre + " atendido por " + Thread.currentThread().getName());
     }
 }

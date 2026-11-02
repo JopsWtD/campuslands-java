@@ -20,19 +20,18 @@ public final class VerificacionPedido implements Runnable {
     public void run() {
         for (int paso = 1; paso <= pasos; paso++) {
             if (Thread.currentThread().isInterrupted()) {
-                System.out.println(nombre + ": cancelada");
+                System.out.println("[VerificacionPedido] : " + nombre + ": cancelada");
                 return;
             }
-            System.out.println(nombre + " paso " + paso + " en "
-                    + Thread.currentThread().getName());
+            System.out.println("[VerificacionPedido] : " + nombre + " paso " + paso + " en " + Thread.currentThread().getName());
             try {
                 Thread.sleep(pausaMs);
             } catch (InterruptedException error) {
                 Thread.currentThread().interrupt();
-                System.out.println(nombre + ": cancelada");
+                System.out.println("[VerificacionPedido] : " + nombre + ": cancelada");
                 return;
             }
         }
-        System.out.println(nombre + ": terminada");
+        System.out.println("[VerificacionPedido] : " + nombre + ": terminada");
     }
 }

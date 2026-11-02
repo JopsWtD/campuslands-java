@@ -9,6 +9,8 @@ public final class ConsultaStock implements Runnable {
     }
 
     private final long esperaMs;
+    // CountDownLatch es una clase de sincronización que permite que uno o varios hilos esperen
+    // hasta que se hayan completado determinadas acciones realizadas por otros hilos.
     private final CountDownLatch inicio = new CountDownLatch(1);
     private Estado estado = Estado.NO_INICIADA;
 
@@ -30,20 +32,24 @@ public final class ConsultaStock implements Runnable {
     public void run() {
         estado = Estado.EN_CURSO;
         inicio.countDown();
+        System.out.println("[ConsultaStock - run()] : " + estado.toString());
         try {
             if (Thread.currentThread().isInterrupted()) {
                 estado = Estado.CANCELADA;
+                System.out.println("[ConsultaStock - isInterrupted()] : " + estado.toString());
                 return;
             }
             Thread.sleep(esperaMs);
             if (Thread.currentThread().isInterrupted()) {
                 estado = Estado.CANCELADA;
+                System.out.println("[ConsultaStock - isInterrupted()] : " + estado.toString());
                 return;
             }
             estado = Estado.COMPLETADA;
         } catch (InterruptedException error) {
             Thread.currentThread().interrupt();
             estado = Estado.CANCELADA;
+            System.out.println("[ConsultaStock - InterruptedException] : " + estado.toString());
         }
     }
 
