@@ -17,6 +17,8 @@ Varios hilos pueden ejecutar tareas correctamente por separado y, aun así, dañ
 | Preguntas e imprevistos | 5 min |
 | **Total** | **120 min** |
 
+El Demo 00 se explica en tres ejemplos separados: [00-1: inventario progresivo](demo/s16demo00/demo00_1/S16Demo00InventarioMain.java), [00-2: monitores distintos](demo/s16demo00/demo00_2/S16Demo00MonitoresMain.java) y [00-3: static synchronized](demo/s16demo00/demo00_3/S16Demo00StaticMain.java). Su README reúne los tres diagramas y el orden de lectura.
+
 Los labs tienen código completo y cambios acotados. Completa en casa lo pendiente. No necesitas desarrollar tres aplicaciones desde cero.
 
 ## Ejecutar
