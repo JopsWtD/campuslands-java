@@ -13,10 +13,12 @@ public class S16Demo02IntercalacionMain {
             };
         }
         EjecutorPrueba.ejecutar(tareas);
-        System.out.println("Incremento desglosado dirigido: esperado=2 observado="
-                + contador.consultar());
+        System.out.println("Incremento desglosado dirigido: esperado=2 observado=" + contador.consultar());
         if (contador.consultar() != 1) {
             throw new IllegalStateException("Intercalacion inesperada");
         }
+
+        // Aunque valor sea volatile, eso no convierte lectura → cálculo → escritura en una sola operación atómica.
+        // La segunda escritura utiliza el 0 que ese hilo ya había guardado en su variable local.
     }
 }
