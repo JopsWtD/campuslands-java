@@ -10,15 +10,15 @@ import java.nio.file.StandardOpenOption;
 
 public class S17Demo02LecturaMain {
     public static void main(String[] args) throws IOException {
-        Path base = args.length == 0
-                ? Path.of(System.getProperty("java.io.tmpdir"), "campus-java-s17", "demo02")
-                : Path.of(args[0]);
-        base = base.toAbsolutePath().normalize();
-        System.out.println("Datos: " + base);
+        Path base = Path.of("src", "05-persistencia-datos",
+                "sesion-17-manejo-archivos", "demo", "s17demo02", "datos");
+
+        System.out.println("Datos: " + base.toAbsolutePath());
         Files.createDirectories(base);
         Path archivo = base.resolve("pedidos.txt");
-        // El segundo argumento permite probar un archivo ausente sin preparar la muestra.
-        if (args.length < 2 || !args[1].equals("solo-leer")) {
+        // Cambia a false para probar la lectura sin crear la muestra.
+        boolean prepararMuestra = true;
+        if (prepararMuestra) {
             try {
                 Files.writeString(archivo,
                         "P-001;Ana;PENDIENTE\nP-002;Luis;ENTREGADO\nP-003;María\nP-004;Sara;OTRO\n",

@@ -10,11 +10,10 @@ import java.nio.file.Path;
 
 public class S17Demo04FormatosMain {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        Path base = args.length == 0
-                ? Path.of(System.getProperty("java.io.tmpdir"), "campus-java-s17", "demo04")
-                : Path.of(args[0]);
-        base = base.toAbsolutePath().normalize();
-        System.out.println("Datos: " + base);
+        Path base = Path.of("src", "05-persistencia-datos",
+                "sesion-17-manejo-archivos", "demo", "s17demo04", "datos");
+
+        System.out.println("Datos: " + base.toAbsolutePath());
         Files.createDirectories(base);
         PedidoSerializable pedido = new PedidoSerializable("P-001", "María");
         Path texto = Files.createTempFile(base, "pedido-", ".txt");
