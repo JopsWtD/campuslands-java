@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
 public class S17Lab02AsistenciaMain {
-    public enum Estado { ASISTIO, FALTO, TARDE }
+    public enum Estado {ASISTIO, FALTO, TARDE}
 
     public static int[] importar(Path archivo) throws IOException {
         int validos = 0;
@@ -38,6 +38,7 @@ public class S17Lab02AsistenciaMain {
 
     public static void main(String[] args) throws IOException {
         Path base = args.length == 0 ? Path.of(System.getProperty("java.io.tmpdir"), "campus-java-s17", "lab02") : Path.of(args[0]);
+        System.out.println(base);
         base = base.toAbsolutePath().normalize();
         System.out.println("Datos: " + base);
         Files.createDirectories(base);
@@ -45,8 +46,8 @@ public class S17Lab02AsistenciaMain {
         if (args.length < 2 || !args[1].equals("solo-leer")) {
             try {
                 Files.writeString(archivo, "estudiante;fecha;estado\n"
-                        + "Ana;2026-11-02;ASISTIO\nJosé;2026-11-02;FALTO\n"
-                        + "María;2026-11-02\nLuis;fecha;ASISTIO\nSara;2026-11-02;PENDIENTE\n",
+                                + "Ana;2026-11-02;ASISTIO\nJosé;2026-11-02;FALTO\n"
+                                + "María;2026-11-02\nLuis;fecha;ASISTIO\nSara;2026-11-02;PENDIENTE\n",
                         StandardCharsets.UTF_8, StandardOpenOption.CREATE_NEW);
             } catch (FileAlreadyExistsException error) {
                 System.out.println("Muestra existente conservada");
